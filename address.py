@@ -14,5 +14,5 @@ with open('ecd_npo.csv', 'w') as fp:
     writer = csv.DictWriter(fp, field_names)
     for datum in reader:
         address = datum['physical_address']
-        if re_place.search(x):
+        if re_place.search(address):
             writer.writerow(datum)
